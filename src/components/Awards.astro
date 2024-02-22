@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import Card2 from "./Card2.astro";
+import moviesApp from "../../public/movielibraly.png";
+import tvt from "../../public/certificates/tvt.png";
+import ida from "../../public/certificates/ida.png";
+import ef from "../../public/certificates/ef.png";
+import un from "../../public/certificates/un.png";
+const awards = [
+  {
+    title: "TVET Level V certificate in Software development",
+    url: "https://drive.google.com/file/d/1vFUOVRRB6J2la3RgUgldlEYWqTNyxaZ0/view?usp=drive_link",
+    image: tvt,
+  },
+  {
+    title: "Junior software developer ida Techinology certificate",
+    url: "https://drive.google.com/file/d/1meRjwX1xwabhvKMkyCAb5i5G4rximC80/view?usp=drive_link",
+    image: ida,
+  },
+  {
+    title: "English Level 7 certificate EF",
+    url: "https://drive.google.com/file/d/185tPz2SWzd2Q0Z2aroxqlvIuXq1otu0a/view?usp=sharing",
+    image: ef,
+  },
+  {
+    title: "Zero Target Mareria",
+    url: "https://drive.google.com/file/d/155rBYxD4EOQP3Y3vkDI39N7NXZhk-ZTW/view?usp=sharing",
+    image: un,
+  },
+];
+---
+
+<section id="awards">
+  <h1>Awards</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+  <div class="my-awards" style="display:flex; flex-wrap: wrap; gap:1rem;">
+    {
+      awards.map((item) => (
+        <Card2 title={item.title.slice(0, 30)} linkUrl={item.url}>
+          <picture>
+            <Image
+              src={item.image}
+              alt={"movie App"}
+              width={250}
+              height={200}
+              class={"img"}
+            />
+          </picture>
+        </Card2>
+      ))
+    }
+  </div>
+</section>
+<style>
+  .img {
+    border-radius: 5px;
+    flex-grow: 1;
+    max-height: 150px;
+  }
+  picture {
+    max-height: 150px;
+    overflow: hidden;
+  }
+</style>

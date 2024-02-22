@@ -1,0 +1,39 @@
+---
+import Card1 from "./Card1.astro";
+import { Image } from "astro:assets";
+import moviesApp from "../../public/movielibraly.png";
+---
+
+<section>
+  <h1>Portifolio</h1>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+  <div style="display: flex; flex-wrap: wrap;">
+    {
+      Array(4)
+        .fill(1)
+        .map((item) => (
+          <Card1
+            title="Movie Libiray"
+            linkUrl="https://movielab.vercel.app"
+            imageUrl="/movielibraly.png"
+          >
+            <Image
+              src={moviesApp}
+              alt={"movie App"}
+              width={300}
+              height={200}
+              class={"Image"}
+            />
+          </Card1>
+        ))
+    }
+  </div>
+</section>
+<style>
+  .Image {
+    border-radius: 5px;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+  }
+</style>

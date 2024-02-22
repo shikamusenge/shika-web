@@ -1,0 +1,62 @@
+---
+import { Image } from "astro:assets";
+import letConnect from "../../public/connect..gif";
+---
+
+<section>
+  <div>
+    <h1>Contact us</h1>
+    <p>Telephone: + (250) 784 589 448 / + (250) 722 123 139</p>
+    <p>Email: codeexp77@gmail.com</p>
+    <Image src="/connect..gif" width={300} height={100} alt="Let connect" />
+  </div>
+  <form>
+    <p>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+    </p>
+    <p>
+      <label for="message">message</label>
+      <textarea name="message" id="message"></textarea>
+    </p>
+    <div style="display:flex; justify-content: end;">
+      <button
+        style="color: white; background-color: black; padding-inline: 1rem; padding-block: .3rem; margin-right: 6%;"
+        >Send message</button
+      >
+    </div>
+  </form>
+</section>
+<style>
+  section {
+    padding-block: 40vmin;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  form {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: rgb(236, 233, 230);
+  }
+  form p {
+    display: grid;
+  }
+  input,
+  textarea {
+    padding: 0.5rem;
+    max-width: 92%;
+    background-color: inherit;
+    outline: none;
+    border: solid black 2px;
+  }
+  textarea {
+    max-height: 6rem;
+    max-width: 92%;
+  }
+  img {
+    width: 500px;
+    max-width: 90%;
+  }
+</style>

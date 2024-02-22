@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import profile2 from "../../public/profile2.png";
+---
+
+<section>
+  <div style="width: 500px; max-width: 100%; flex-grow: 1;">
+    <h3>Hello, I'm SHIKAMUSENGE Philemon</h3>
+    <h1>Full stack Developer</h1>
+    <p>
+      I'm a passionate and dedicated full-stack developer with a knack for
+      leveraging the latest technologies to bring creative solutions to life
+      through the power of coding. With a strong foundation of knowledge and
+      skills, I thrive on tackling complex challenges and turning them into
+      elegant, efficient solutions. From front-end design to back-end
+      development, I'm committed to delivering high-quality results that exceed
+      expectations.
+    </p>
+    <div>
+      <button class="btn"> Browse Project</button>
+      <button class="btn" style="background-color: rgb(225, 227, 228);"
+        ><a
+          href="https://drive.google.com/file/d/1LDMlIOsJW2xkQOZEQLVN5DVzeEku89O3/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="text-decoration: none; color:black">Douwnload Cv</a
+        >
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="image-container">
+      <Image
+        src={profile2}
+        width={300}
+        height={400}
+        alt="shikamusenge"
+        class={"pimg"}
+      />
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90vh;
+    flex-wrap: wrap-reverse;
+  }
+  .image-container {
+    width: fit-content;
+    border-radius: 50%;
+    overflow: hidden;
+    background: skyblue;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(175, 169, 190),
+      hsla(257, 44%, 56%, 0.712),
+      hwb(257 11% 74% / 0.132)
+    );
+    animation-duration: 5s;
+    animation-name: anim-img;
+    animation-iteration-count: infinite;
+  }
+
+  .pimg {
+    margin-bottom: -3rem;
+  }
+  .btn {
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 0.2rem;
+    padding-inline: 1rem;
+    padding-block: 0.4rem;
+    cursor: pointer;
+    border: none;
+  }
+</style>

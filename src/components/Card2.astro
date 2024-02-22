@@ -1,0 +1,43 @@
+---
+const { title, imageUrl, linkUrl } = Astro.props;
+---
+
+<div class="card-container">
+  <slot />
+  <p>{title}</p>
+  <div>
+    <a href={linkUrl} target="_blank">View certificate</a>
+  </div>
+</div>
+<style>
+  .card-container {
+    width: 250px;
+    flex-grow: 1;
+    background-color: rgb(229, 229, 220);
+    margin: 2px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    height: 200px;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  .card-container div {
+    position: relative;
+  }
+  .card-container div a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding-block: 0.2rem;
+    padding-inline: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-bottom: -0.6rem;
+    margin-right: 1rem;
+    border-radius: 0.15rem;
+  }
+</style>

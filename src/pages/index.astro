@@ -1,0 +1,55 @@
+---
+import NavBar from "../components/NavBar.astro"
+import Hero from "../components/Hero.astro"
+import About from "../components/About.astro"
+import Portifolio from "../components/Portifolio.astro"
+import Footer from "../components/Footer.astro"
+import Awards from "../components/Awards.astro"
+import Contact from "../components/Contact.astro"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/profile2.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Shikamusenge</title>
+	</head>
+	<body>
+		<NavBar/>
+		<main>
+		<Hero/>
+		<About />
+		<Portifolio />
+		<Awards/>
+		<Contact/>
+		</main>
+		<Footer/>
+	</body>
+</html>
+<style>
+html{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+.btn{
+    outline:none;
+    background-color:black;
+    color:white;
+    border-radius:0.2rem;
+    padding-inline:1rem;
+    padding-block:.5rem
+    cursor:pointer;
+}
+main{
+	max-width:1200px;
+	margin-inline:auto;
+	padding-inline:2rem;
+}
+
+</style>
