@@ -1,11 +1,68 @@
+---
+import { Image } from "astro:assets";
+import gitHub from "../../public/social_media/3d-fluency-github-logo.png";
+import Linked from "../../public/social_media/icons8-in-48.png";
+import insta from "../../public/social_media/grapy-instagram-icon.png";
+import whatsapp from "../../public/social_media/icons8-whatsapp-50.png";
+import fb from "../../public/social_media/icons8-facebook-48.png";
+import twiter from "../../public/social_media/twitter-x-logo-png-9.png";
+import home from "../../public/social_media/icons8-home-50.png";
+const medias = [
+  {
+    mediaIcon: twiter,
+    url: "https://twitter.com/ShikamusengeP",
+  },
+  {
+    mediaIcon: Linked,
+    url: "https://www.linkedin.com/in/shikamusenge-philemon-86494b291/",
+  },
+  {
+    mediaIcon: gitHub,
+    url: "https://github.com/shikamusenge",
+  },
+  {
+    mediaIcon: whatsapp,
+    url: "https://wa.me/+250784589448",
+  },
+  {
+    mediaIcon: fb,
+    url: "https://www.facebook.com/profile.php?id=100085362144715",
+  },
+  {
+    mediaIcon: insta,
+    url: "https://www.instagram.com/phile_ruganzu720/",
+  },
+];
+---
+
 <section>
   <div class="container">
-    <div>
+    <div id="main">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        {
+          medias.map((media) => (
+            <li>
+              <a href={media.url} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={media.mediaIcon}
+                  width={28}
+                  height={28}
+                  alt={"icon"}
+                />
+              </a>
+            </li>
+          ))
+        }
       </ul>
+      <a href="#home"
+        ><Image
+          src={home}
+          width={30}
+          height={30}
+          alt={"icon"}
+          class={"img"}
+        /></a
+      >
     </div>
     <div style="text-align: center;">
       ALL RIGHT RESERVED TO &copy; SHIKAMUSENGE
@@ -16,5 +73,22 @@
   section {
     background-color: black;
     color: white;
+  }
+  ul {
+    display: flex;
+    padding-block: 0.8rem;
+    gap: 0.7rem;
+  }
+  ul li {
+    list-style: none;
+  }
+  #main {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+  }
+  .img {
+    margin-block: auto;
+    margin-inline-end: 2rem;
   }
 </style>

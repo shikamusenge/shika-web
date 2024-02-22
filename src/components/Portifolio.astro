@@ -2,30 +2,54 @@
 import Card1 from "./Card1.astro";
 import { Image } from "astro:assets";
 import moviesApp from "../../public/movielibraly.png";
+import calc from "../../public/projects/calc.png";
+import weather from "../../public/projects/weather.png";
+import sketch from "../../public/projects/sketch.png";
+const projects = [
+  {
+    title: " Movie Libiraly",
+    image: moviesApp,
+    techinologies: [],
+    url: "https://moive-lab.vercel.app/",
+  },
+  {
+    title: " Et scetch",
+    image: sketch,
+    techinologies: [],
+    url: "https://shikamusenge.github.io/Etch-A-Sketch/",
+  },
+  {
+    title: "Calculator App",
+    image: calc,
+    techinologies: [],
+    url: "https://shikamusenge.github.io/odin-calculator/",
+  },
+  {
+    title: "Weather App",
+    image: weather,
+    techinologies: [],
+    url: "https://shikamusenge.github.io/weatherApp/",
+  },
+];
 ---
 
-<section>
+<section id="portifolio">
   <h1>Portifolio</h1>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+  <p>List of project worked on</p>
+
   <div style="display: flex; flex-wrap: wrap;">
     {
-      Array(4)
-        .fill(1)
-        .map((item) => (
-          <Card1
-            title="Movie Libiray"
-            linkUrl="https://movielab.vercel.app"
-            imageUrl="/movielibraly.png"
-          >
-            <Image
-              src={moviesApp}
-              alt={"movie App"}
-              width={300}
-              height={200}
-              class={"Image"}
-            />
-          </Card1>
-        ))
+      projects.map((item) => (
+        <Card1 title={item.title} linkUrl={item.url}>
+          <Image
+            src={item.image}
+            alt={item.title}
+            width={300}
+            height={200}
+            class={"Image"}
+          />
+        </Card1>
+      ))
     }
   </div>
 </section>
@@ -34,6 +58,5 @@ import moviesApp from "../../public/movielibraly.png";
     border-radius: 5px;
     flex-grow: 1;
     width: 100%;
-    height: 100%;
   }
 </style>
