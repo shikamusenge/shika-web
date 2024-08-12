@@ -5,15 +5,29 @@ import moviesApp from "../../public/movielibraly.png";
 import calc from "../../public/projects/calc.png";
 import weather from "../../public/projects/weather.png";
 import sketch from "../../public/projects/sketch.png";
+import smrtv from "../../public/projects/smrtv.png"; 
+
 const projects = [
   {
-    title: " Movie Libiraly",
+    title: "online smart voting",
+    image: smrtv,
+    techinologies: [],
+    url: "https://smartvottingonline.000webhostapp.com",
+  },
+  {
+    title: "IKIBINA",
     image: moviesApp,
     techinologies: [],
     url: "https://moive-lab.vercel.app/",
   },
   {
-    title: " Et scetch",
+    title: "Movie Library",
+    image: moviesApp,
+    techinologies: [],
+    url: "https://moive-lab.vercel.app/",
+  },
+  {
+    title: "Et Sketch",
     image: sketch,
     techinologies: [],
     url: "https://shikamusenge.github.io/Etch-A-Sketch/",
@@ -33,11 +47,12 @@ const projects = [
 ];
 ---
 
-<section id="portifolio">
-  <h1>Portifolio</h1>
-  <p>List of project worked on</p>
+<section id="portfolio">
+  <div class="container">
+  <h1>Portfolio</h1>
+  <p>List of projects worked on</p>
 
-  <div style="display: flex; flex-wrap: wrap;">
+  <div class="portfolio-grid">
     {
       projects.map((item) => (
         <Card1 title={item.title} linkUrl={item.url}>
@@ -46,17 +61,67 @@ const projects = [
             alt={item.title}
             width={300}
             height={200}
-            class={"Image"}
+            class="image"
           />
         </Card1>
       ))
     }
-  </div>
+  </div></div>
 </section>
+
 <style>
-  .Image {
-    border-radius: 5px;
-    flex-grow: 1;
+  section {
+    padding: 2rem;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  .container{
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+              background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .image {
+    border-radius: 8px;
     width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 </style>

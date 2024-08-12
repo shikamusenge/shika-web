@@ -4,7 +4,8 @@ import profile2 from "../../public/profile2.png";
 ---
 
 <section>
-  <div style="width: 500px; max-width: 100%; flex-grow: 1;">
+  <div class="container">
+  <div class="text-container">
     <h3>Hello, I'm SHIKAMUSENGE Philemon</h3>
     <h1>Full stack Developer</h1>
     <p>
@@ -26,56 +27,77 @@ import profile2 from "../../public/profile2.png";
           style="text-decoration: none; color:black">Douwnload Cv</a
         >
       </button>
-    </div>
+    </div></div>
   </div>
-
-  <div class="container">
-    <div class="image-container">
-      <Image
-        src={profile2}
-        width={300}
-        height={400}
-        alt="shikamusenge"
-        class={"pimg"}
-      />
-    </div>
-  </div>
-</section>
 <style>
-  section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 90vh;
-    flex-wrap: wrap-reverse;
-  }
-  .image-container {
-    width: fit-content;
-    border-radius: 50%;
-    overflow: hidden;
-    background: skyblue;
-    background-image: linear-gradient(
-      to bottom right,
-      rgb(175, 169, 190),
-      hsla(257, 44%, 56%, 0.712),
-      hwb(257 11% 74% / 0.132)
-    );
-    animation-duration: 5s;
-    animation-name: anim-img;
-    animation-iteration-count: infinite;
-  }
+ .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 50%;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
 
-  .pimg {
-    margin-bottom: -3rem;
-  }
-  .btn {
-    outline: none;
-    background-color: black;
-    color: white;
-    border-radius: 0.2rem;
-    padding-inline: 1rem;
-    padding-block: 0.4rem;
-    cursor: pointer;
-    border: none;
-  }
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      background-image: url("/b.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      border-radius: 0.2rem;
+      padding-inline: 1.5rem;
+      padding-block: 0.6rem;
+      cursor: pointer;
+      border: none;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: black;
+      border: 1px solid black;
+    }
+
+    .btn-outline:hover {
+      background-color: black;
+      color: white;
+    }
+    .container{
+      margin-inline: auto;
+      max-width: 1200px;
+    }
 </style>

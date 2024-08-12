@@ -11,26 +11,32 @@ const medias = [
   {
     mediaIcon: twiter,
     url: "https://twitter.com/ShikamusengeP",
+    alt: "Twitter Icon"
   },
   {
     mediaIcon: Linked,
     url: "https://www.linkedin.com/in/shikamusenge-philemon-86494b291/",
+    alt: "LinkedIn Icon"
   },
   {
     mediaIcon: gitHub,
     url: "https://github.com/shikamusenge",
+    alt: "GitHub Icon"
   },
   {
     mediaIcon: whatsapp,
     url: "https://wa.me/+250784589448",
+    alt: "WhatsApp Icon"
   },
   {
     mediaIcon: fb,
     url: "https://www.facebook.com/profile.php?id=100085362144715",
+    alt: "Facebook Icon"
   },
   {
     mediaIcon: insta,
     url: "https://www.instagram.com/phile_ruganzu720/",
+    alt: "Instagram Icon"
   },
 ];
 ---
@@ -39,36 +45,24 @@ const medias = [
   <div class="container">
     <div id="main">
       <ul>
-        {
-          medias.map((media) => (
-            <li>
-              <a href={media.url} target="_blank" rel="noopener noreferrer">
-                <Image
-                  src={media.mediaIcon}
-                  width={28}
-                  height={28}
-                  alt={"icon"}
-                />
-              </a>
-            </li>
-          ))
-        }
+        {medias.map((media) => (
+          <li>
+            <a href={media.url} target="_blank" rel="noopener noreferrer" aria-label={media.alt}>
+              <Image src={media.mediaIcon} width={28} height={28} alt={media.alt} />
+            </a>
+          </li>
+        ))}
       </ul>
-      <a href="#home"
-        ><Image
-          src={home}
-          width={30}
-          height={30}
-          alt={"icon"}
-          class={"img"}
-        /></a
-      >
+      <a href="#home">
+        <Image src={home} width={30} height={30} alt="Home Icon" class="img" />
+      </a>
     </div>
     <div style="text-align: center;">
-      ALL RIGHT RESERVED TO &copy; SHIKAMUSENGE
+      ALL RIGHTS RESERVED TO &copy; SHIKAMUSENGE
     </div>
   </div>
 </section>
+
 <style>
   section {
     background-color: black;
@@ -85,7 +79,7 @@ const medias = [
   #main {
     display: flex;
     justify-content: space-between;
-    justify-items: center;
+    align-items: center;
   }
   .img {
     margin-block: auto;

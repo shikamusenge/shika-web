@@ -1,73 +1,185 @@
 <section id="about">
-  <h1>About me.</h1>
-  <h3>Who am I?</h3>
-  <p>
-    I am a problem solver, always eager to take on new challenges and create
-    innovative web applications. My journey in the world of programming began
-    with a deep curiosity and has evolved into a fulfilling career in web
-    development. Whether it's crafting sleek and responsive user interfaces or
-    architecting robust server-side solutions, I thrive on the thrill of
-    building meaningful projects from the ground up
-  </p>
+  <div class="container">
+    <h1 class="fade-in">About Me</h1>
+    <h3 class="fade-in delay-1">Who am I?</h3>
+    <p class="fade-in delay-2">
+      I am a problem solver, always eager to take on new challenges and create
+      innovative web applications. My journey in the world of programming began
+      with deep curiosity and has evolved into a fulfilling career in web
+      development. Whether it's crafting sleek and responsive user interfaces or
+      architecting robust server-side solutions, I thrive on the thrill of
+      building meaningful projects from the ground up.
+    </p>
 
-  <h3>Skills</h3>
-  <div class="skills">
-    <ul>
-      <h3>Progrmaing Languages</h3>
-      <li>Typescript</li>
-      <li>java script</li>
-      <li>Node js</li>
-      <li>Java</li>
-      <li>Php</li>
-      <li>HTM</li>
-      <li>C++</li>
-      <li>CSS</li>
-      <li>C</li>
-      <li>Pytho</li>
-    </ul>
-    <ul>
-      <h3>Database</h3>
-      <li>Mysql</li>
-      <li>Oracle</li>
-      <li>postgress</li>
-      <li>Mongo Db</li>
-      <li>Prisma</li>
-      <li>Mongoose</li>
-    </ul>
-    <ul>
-      <h3>Tools</h3>
-      <li>Typescript</li>
-      <li>java script</li>
-      <li>Node js</li>
-      <li>Java</li>
-      <li>Php</li>
-      <li>HTM</li>
-      <li>C++</li>
-      <li>CSS</li>
-      <li>C</li>
-      <li>Pytho</li>
-    </ul>
-    <ul>
-      <h3>Progrmaing Languages</h3>
-      <li>Typescript</li>
-      <li>java script</li>
-      <li>Node js</li>
-      <li>Java</li>
-      <li>Php</li>
-      <li>HTM</li>
-      <li>C++</li>
-      <li>CSS</li>
-      <li>C</li>
-      <li>Pytho</li>
-    </ul>
+    <h3 class="fade-in delay-3">Skills</h3>
+    <div class="skills fade-in delay-4">
+      <ul>
+        <h4>Programming Languages</h4>
+        <li>TypeScript</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>Java</li>
+        <li>PHP</li>
+        <li>HTML</li>
+        <li>C++</li>
+        <li>CSS</li>
+        <li>C</li>
+        <li>Python</li>
+      </ul>
+      <ul>
+        <h4>Databases</h4>
+        <li>MySQL</li>
+        <li>Oracle</li>
+        <li>PostgreSQL</li>
+        <li>MongoDB</li>
+        <li>Prisma</li>
+        <li>Mongoose</li>
+      </ul>
+      <ul>
+        <h4>Tools & Technologies</h4>
+        <li>Git</li>
+        <li>Docker</li>
+        <li>Webpack</li>
+        <li>Babel</li>
+        <li>VS Code</li>
+        <li>Postman</li>
+        <li>Linux</li>
+        <li>CI/CD</li>
+        <li>Jenkins</li>
+        <li>GitHub</li>
+      </ul>
+    </div>
   </div>
 </section>
+
 <style>
+  body {
+    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    text-align: justify;
+  }
+
   .skills {
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
   }
+
   ul {
+    list-style-type: none;
+    padding: 0;
     flex-grow: 1;
+    min-width: 200px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  ul h4 {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  li {
+    font-size: 1.125rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .skills {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    ul h4 {
+      font-size: 1.15rem;
+    }
+
+    li {
+      font-size: 1rem;
+    }
+  }
+
+  /* Animation Styles */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.5s;
+  }
+
+  .delay-2 {
+    animation-delay: 1s;
+  }
+
+  .delay-3 {
+    animation-delay: 1.5s;
+  }
+
+  .delay-4 {
+    animation-delay: 2s;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>

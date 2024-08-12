@@ -5,6 +5,7 @@ import tvt from "../../public/certificates/tvt.png";
 import ida from "../../public/certificates/ida.png";
 import ef from "../../public/certificates/ef.png";
 import un from "../../public/certificates/un.png";
+import dt from "../../public/certificates/data-s.png";
 const awards = [
   {
     title: "TVET Level V certificate in Software development",
@@ -22,6 +23,11 @@ const awards = [
     image: ef,
   },
   {
+    title: "Data Engineering and Data Science",
+    url: "https://drive.google.com/file/d/155rBYxD4EOQP3Y3vkDI39N7NXZhk-ZTW/view?usp=sharing",
+    image: dt,
+  },
+  {
     title: "Zero Target Mareria",
     url: "https://drive.google.com/file/d/155rBYxD4EOQP3Y3vkDI39N7NXZhk-ZTW/view?usp=sharing",
     image: un,
@@ -30,6 +36,7 @@ const awards = [
 ---
 
 <section id="awards">
+  <div class="container">
   <h1>Awards</h1>
   <p>List of awards/certificate that I own</p>
   <div class="my-awards" style="display:flex; flex-wrap: wrap; gap:1rem;">
@@ -48,9 +55,13 @@ const awards = [
         </Card2>
       ))
     }
-  </div>
+  </div></div>
 </section>
 <style>
+  .container{
+    max-width: 1200px;
+    margin: 3rem auto ;
+  }
   .img {
     border-radius: 5px;
     flex-grow: 1;
