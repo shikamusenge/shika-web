@@ -6,43 +6,44 @@ import calc from "../../public/projects/calc.png";
 import weather from "../../public/projects/weather.png";
 import sketch from "../../public/projects/sketch.png";
 import smrtv from "../../public/projects/smrtv.png"; 
+import ik from "../../public/projects/iki.jpeg"; 
 
 const projects = [
   {
     title: "online smart voting",
     image: smrtv,
     techinologies: [],
-    url: "https://smartvottingonline.000webhostapp.com",
+    url: "https:/smartvottingonline.000webhostapp.com",
   },
   {
     title: "IKIBINA",
-    image: moviesApp,
+    image: ik,
     techinologies: [],
-    url: "https://moive-lab.vercel.app/",
+    url: "https:/moive-lab.vercel.app/",
   },
   {
     title: "Movie Library",
     image: moviesApp,
     techinologies: [],
-    url: "https://moive-lab.vercel.app/",
+    url: "https:/moive-lab.vercel.app/",
   },
   {
     title: "Et Sketch",
     image: sketch,
     techinologies: [],
-    url: "https://shikamusenge.github.io/Etch-A-Sketch/",
+    url: "https:/shikamusenge.github.io/Etch-A-Sketch/",
   },
   {
     title: "Calculator App",
     image: calc,
     techinologies: [],
-    url: "https://shikamusenge.github.io/odin-calculator/",
+    url: "https:/shikamusenge.github.io/odin-calculator/",
   },
   {
     title: "Weather App",
     image: weather,
     techinologies: [],
-    url: "https://shikamusenge.github.io/weatherApp/",
+    url: "https:/shikamusenge.github.io/weatherApp/",
   },
 ];
 ---
@@ -79,6 +80,7 @@ const projects = [
     justify-content: center;
     align-items: center;
     max-width: 1200px;
+    margin-inline: auto;
               background-color: rgba(255, 255, 255, 0.5);
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -102,6 +104,9 @@ const projects = [
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
     align-items: stretch;
+    min-width: 100%;
+    margin-inline: auto;
+    padding-inline: auto;
   }
 
   .image {
