@@ -5,6 +5,14 @@ import profile2 from "../../public/profile2.png";
 
 <section>
   <div class="container">
+    <div class="picture">
+      <div class="image-container">
+         <picture>
+        <Image src={profile2} alt="Philemon">
+      </picture>
+      </div>
+     
+    </div>
   <div class="text-container">
     <h3>Hello, I'm SHIKAMUSENGE Philemon</h3>
     <h1>Full stack Developer</h1>
@@ -69,6 +77,9 @@ import profile2 from "../../public/profile2.png";
       display: flex;
       gap: 1rem;
     }
+    .picture{
+      display: none;
+    }
 
     .btn {
       background-color: black;
@@ -100,4 +111,36 @@ import profile2 from "../../public/profile2.png";
       margin-inline: auto;
       max-width: 1200px;
     }
+    .picture{
+  border:  solid 5px white; 
+  box-shadow: 3px 1px 1px 1px #333;
+  background-image: url("https://petapixel.com/assets/uploads/2013/05/AusWqKj.gif");
+  border-radius: 50%;
+  background-size: cover;  
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+}
+.picture img {
+max-width: 200px;
+max-height: 370px;
+margin-top: -3rem;
+}
+      @media screen and (max-width: 800px) {
+
+           section {
+            background-position: center;
+            object-fit: scale-down
+           }
+.text-container{
+max-width: 100%;
+align-items: right;
+margin-inline: auto;
+background-color: rgba(255, 255, 255, 0.714);
+}
+.picture{
+  display: flex;
+}
+
+  }
 </style>
