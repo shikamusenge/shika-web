@@ -6,7 +6,7 @@ import calc from "../../public/projects/calc.png";
 import weather from "../../public/projects/weather.png";
 import sketch from "../../public/projects/sketch.png";
 import smrtv from "../../public/projects/smrtv.png"; 
-import ik from "../../public/projects/iki.jpeg"; 
+import piano from "../../public/projects/piano.png"; 
 
 const projects = [
   {
@@ -16,10 +16,10 @@ const projects = [
     url: "https:/smartvottingonline.000webhostapp.com",
   },
   {
-    title: "IKIBINA",
-    image: ik,
+    title: "JS PIANO",
+    image: piano,
     techinologies: [],
-    url: "https:/moive-lab.vercel.app/",
+    url: "https://philemonpiano.netlify.app/",
   },
   {
     title: "Movie Library",
@@ -107,11 +107,13 @@ const projects = [
     min-width: 100%;
     margin-inline: auto;
     padding-inline: auto;
+    max-width: 100vw;
+    overflow: hidden;
   }
 
   .image {
     border-radius: 8px;
-    width: 100%;
+    max-width: 97.50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
@@ -128,5 +130,12 @@ const projects = [
     p {
       font-size: 1rem;
     }
+      .portfolio-grid{
+
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 0;
+        margin-inline: -1rem;
+    }
+
   }
 </style>
