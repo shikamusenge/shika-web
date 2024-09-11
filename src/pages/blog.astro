@@ -1,0 +1,106 @@
+---
+import NavBar from "../components/NavBar.astro"
+import Footer from "../components/Footer.astro"
+import Image from "astro/components/Image.astro"
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/profile2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Shikamusenge Blog</title>
+</head>
+<body>
+    <NavBar/>
+    <main>
+        <section class="blog-preview">
+            <h1>Preparation Matters in Development</h1>
+            <img src={"https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/RLw-UC03Gwc/upload/b18e747f9b406f50960c31c77facd140.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"} alt="Blog Post Image"/>
+            <p>Plan Thoroughly, Code Efficiently: The mantra holds true in the fast-paced world of software development and helps define better project management and delivery. This way of looking into things is concentrated that they firmly believe good software starts with a well thought out plan, over just writing code. Let me explain how important planning is and also, Planning can improve the efficiency of development.</p>
+            <a href="https://shikamusenge.hashnode.dev/plan-thoroughly-code-efficiently-why-thoughtful-preparation-matters-in-development" target="_blank" rel="noopener noreferrer" class="btn">
+                Read the Full Blog Post
+            </a>
+        </section>
+    </main>
+    <Footer/>
+</body>
+</html>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body, html {
+        font-family: "Inter", sans-serif;
+        background-color: hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 20%);
+    }
+
+    main {
+        margin: auto;
+        max-width: 800px;
+        padding: 2rem;
+        min-height: 90vh;
+    }
+
+    .blog-preview {
+        text-align: center;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    .blog-preview img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-preview h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: hsl(0, 0%, 15%);
+    }
+
+    .blog-preview p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: hsl(0, 0%, 40%);
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        background-color: black;
+        color: hsl(0, 0%, 100%);
+        border-radius: 0.4rem;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        background-color: hsl(0, 0%, 20%);
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .blog-preview {
+            padding: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+    }
+</style>
