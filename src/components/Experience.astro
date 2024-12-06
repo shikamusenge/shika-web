@@ -1,23 +1,28 @@
 <style>
+  /* Container and Background */
   #experiences {
-    padding: 40px;
+    padding: 60px;
     background-image: url("/exp-bg.jpg");
     background-size: cover;
+    background-position: center;
+    color: #fff;
   }
 
   #experiences .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffffd4;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
 
   #experiences h1 {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333;
   }
 
   #experiences ul {
@@ -26,51 +31,127 @@
     margin: 0;
   }
 
+  /* Experience Item Style */
   #experiences li {
-    padding: 20px;
+    padding: 25px;
     border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
   }
 
+  #experiences li:hover {
+    background-color: #f4f4f4;
+  }
+
+  /* Remove border from the last item */
   #experiences li:last-child {
     border-bottom: none;
   }
 
+  /* Company name style */
   #experiences .company {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 600;
+    color: #2c3e50;
     margin-bottom: 10px;
   }
 
+  #experiences .company a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  #experiences .company a:hover {
+    color: #3498db;
+  }
+
+  /* Position title style */
   #experiences .position {
-    font-size: 16px;
-    color: #666;
+    font-size: 18px;
+    color: #7f8c8d;
     margin-bottom: 10px;
   }
 
+  /* Employment Status style */
   #experiences .status {
-    font-size: 14px;
-    color: #999;
+    font-size: 16px;
+    color: #bdc3c7;
+  }
+
+  /* Icon styling */
+  .company-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+    color: #3498db;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #experiences .container {
+      padding: 20px;
+    }
+
+    #experiences h1 {
+      font-size: 28px;
+    }
+
+    #experiences .company {
+      font-size: 24px;
+    }
+
+    #experiences .position {
+      font-size: 16px;
+    }
   }
 </style>
 
 <section id="experiences">
   <div class="container">
-    <h1>My Experiences</h1>
+    <h1>My Professional Experience</h1>
     <ul>
       <li>
-        <h2 class="company">TYAZA Limited</h2>
+        <h2 class="company">
+          <i class="company-icon fa fa-building"></i>
+          <a href="https://www.tyaza.com" target="_blank">TYAZA Limited</a>
+        </h2>
         <p class="position">Software Developer & Financial Manager</p>
-        <p class="status">Current</p>
+        <p class="status">Currently working</p>
       </li>
       <li>
-        <h2 class="company">IDA TECHNOLOGY</h2>
+        <h2 class="company">
+          <i class="company-icon fa fa-leaf"></i>
+          <a href="https://www.gardentss.com" target="_blank">Garden TSS</a>
+        </h2>
+        <p class="position">Trainer in Software Development</p>
+        <p class="status">Currently working</p>
+      </li>
+      <li>
+        <h2 class="company">
+          <i class="company-icon fa fa-cogs"></i>
+          <a href="https://kitech.rw/" target="_blank">Kitech</a>
+        </h2>
+        <p class="position">Back-end Developer</p>
+        <p class="status">August 2024 - September 2024</p>
+      </li>
+      <li>
+        <h2 class="company">
+          <i class="company-icon fa fa-hospital"></i>
+          <a href="https://www.krh.gov.rw/" target="_blank">KIBUNGO Level II Teaching Hospital</a>
+        </h2>
+        <p class="position">ITC Officer Intern</p>
+        <p class="status">July 2024 - September 2024</p>
+      </li>
+      <li>
+        <h2 class="company">
+          <i class="company-icon fa fa-briefcase"></i>
+          <a href="https://www.linkedin.com/posts/ida-technology-ltd_internships-opportunities-tech-activity-7043946516880736256-MC4M" target="_blank">IDA TECHNOLOGY</a>
+        </h2>
         <p class="position">Software Developer Intern</p>
         <p class="status">September 2023 - October 2023</p>
-      </li>
-      <li>
-        <h2 class="company">KIBUNGO Level II Teaching Hospital</h2>
-        <p class="position">ITC Officer Intern</p>
-        <p class="status">Current</p>
       </li>
     </ul>
   </div>
